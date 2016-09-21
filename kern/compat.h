@@ -15,6 +15,10 @@
 #include <asm/fpu-internal.h>
 #endif
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,6,0)
+#include <asm/syscall.h>
+#endif
+
 #if !defined(VMX_EPT_AD_BIT)
 #define VMX_EPT_AD_BIT          (1ull << 21)
 #define VMX_EPT_AD_ENABLE_BIT   (1ull << 6)
