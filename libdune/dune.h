@@ -12,6 +12,10 @@
 #include "fpu.h"
 #include "../kern/dune.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef void (*sighandler_t)(int);
 
 // utilities
@@ -350,3 +354,7 @@ static inline int dune_init_and_enter(void)
 	
 	return dune_enter();
 }
+
+#ifdef __cplusplus
+}
+#endif
